@@ -1,9 +1,9 @@
+import Header from "@/components/Header"
+
 const Layout = ({children}) => {
     return (
         <>
-            <header>
-                Layout
-            </header>
+            <Header />
             <main>
                 {children}
             </main>
