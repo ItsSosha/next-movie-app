@@ -1,11 +1,27 @@
 import Image from "next/image"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper";
-import { Container, Box, Typography } from "@mui/material";
+import { Box, Typography, keyframes } from "@mui/material";
 import {img1, img2, img3, img4, img5} from "@/images";
+import { KeyboardDoubleArrowDownOutlined } from "@mui/icons-material";
+import { useTheme } from "@emotion/react";
+
+const FloatingArrow = keyframes`
+0% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-50%);
+}
+100% {
+    transform: translateY(0);
+}
+`
+
 const Intro = () => {
 
-    
+    const theme = useTheme();
+    console.log(theme);
 
     return (
         <Box sx={{position: 'relative', height: '100vh'}} component="section">
@@ -68,6 +84,16 @@ const Intro = () => {
                         style={{objectFit: 'cover', objectPosition: 'center'}}/>
                 </SwiperSlide>
             </Swiper>
+            <KeyboardDoubleArrowDownOutlined fontSize="large" color='secondary'
+                sx={{
+                    position: 'absolute', 
+                    left: '50%', 
+                    bottom: '1.5em', 
+                    transform: 'translateX(-50%)', 
+                    animation: `${FloatingArrow} infinite 2s ease`,
+                    filter: 
+                          `drop-shadow(-1px -1px 0px ${theme.palette.primary.main}) drop-shadow(2px -1px 0px ${theme.palette.primary.main}) drop-shadow(2px 2px 0px ${theme.palette.primary.main}) drop-shadow(-1px 2px 0px ${theme.palette.primary.main})`
+                    }} />
         </Box>
       );
 }
