@@ -30,9 +30,10 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <AppBar position="fixed">
+        <AppBar position="fixed" sx={{backgroundColor: 'rgba(33, 33, 18, 0.75)'}}>
             <Container 
-                maxWidth='xl'>
+                maxWidth='xl' 
+                sx={{opacity: '100%'}}>
                 <Toolbar>
                     <IconButton 
                         color="secondary"

@@ -1,10 +1,11 @@
 import Header from "@/components/Header"
+import { roboto, syne } from "@/utils/fonts"
 
 const Layout = ({children}) => {
     return (
         <>
             <Header />
-            <main>
+            <main className={syne.className}>
                 {children}
             </main>
         </>

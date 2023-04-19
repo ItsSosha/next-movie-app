@@ -91,19 +91,45 @@ body {
 }
  */
 
- * {
+@import url('swiper/css';);
+
+/* .swiper, .swiper-wrapper {
+    min-height: 60vh;
+} */
+
+.swiper {
+    min-height: 100vh;
+    filter: opacity(75%) contrast(75%);
+}
+
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 html,
-body {
+body,
+#__next {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100%;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+
+#__next main {
+  flex-grow: 1;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+main {
+  background-color: black;
 }
