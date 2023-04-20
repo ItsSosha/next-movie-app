@@ -8,33 +8,34 @@ import { useTheme } from "@emotion/react";
 
 const FloatingArrow = keyframes`
 0% {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
 }
 50% {
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
 }
 100% {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
 }
 `
 
 const Intro = () => {
 
     const theme = useTheme();
-    console.log(theme);
 
     return (
         <Box sx={{position: 'relative', height: '100vh'}} component="section">
             <Typography 
                 component="h1"
+                variant="h1"
                 sx={{
                     position: 'absolute',
+                    width: '90vw',
                     left: '50%',
                     top: '50%',
                     transform: 'translate(-50%, -50%)',
                     zIndex: 2,
                     fontWeight: 800,
-                    fontSize: '5rem',
+                    // fontSize: '5rem',
                     textAlign: 'center',
                     userSelect: 'none',
                     pointerEvents: 'none',
@@ -89,7 +90,7 @@ const Intro = () => {
                     position: 'absolute', 
                     left: '50%', 
                     bottom: '1.5em', 
-                    transform: 'translateX(-50%)', 
+                    display: 'block',
                     animation: `${FloatingArrow} infinite 2s ease`,
                     filter: 
                           `drop-shadow(-1px -1px 0px ${theme.palette.primary.main}) drop-shadow(2px -1px 0px ${theme.palette.primary.main}) drop-shadow(2px 2px 0px ${theme.palette.primary.main}) drop-shadow(-1px 2px 0px ${theme.palette.primary.main})`

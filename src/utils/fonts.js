@@ -12,6 +12,4 @@ const syne = Syne({
     style: ['normal']
 })
 
-
-console.log(syne);
 export { roboto, syne }
