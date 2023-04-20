@@ -4,8 +4,8 @@ import { defaultTheme } from '@/utils/theme';
 import { CssBaseline } from '@mui/material';
 
 
-
 export default function App({ Component, pageProps }) {
+
     return (
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />

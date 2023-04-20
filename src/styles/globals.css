@@ -93,10 +93,6 @@ body {
 
 @import url('swiper/css';);
 
-/* .swiper, .swiper-wrapper {
-    min-height: 60vh;
-} */
-
 .swiper {
     min-height: 100vh;
     filter: opacity(75%) contrast(75%);

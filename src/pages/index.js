@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { withLayout } from '@/layout/layout'
 import Intro from '@/components/Intro';
+import HomeExplore from '@/components/homeExplore';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         </Head>
         <div style={{color: '#FFFFFF'}}>
             <Intro />
+            <HomeExplore />
         </div>
     </>
   )
