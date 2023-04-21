@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { withLayout } from '@/layout/layout'
 import Intro from '@/components/Intro';
-import HomeExplore from '@/components/homeExplore';
+import HomeExplore from '@/components/HomeExplore';
 
 function Home() {
   return (

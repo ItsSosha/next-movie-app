@@ -95,7 +95,7 @@ body {
 
 .swiper {
     min-height: 100vh;
-    filter: opacity(75%) contrast(75%);
+    filter: opacity(75%) contrast(75%) blur(6px);
 }
 
 * {

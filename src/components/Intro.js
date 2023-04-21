@@ -35,7 +35,6 @@ const Intro = () => {
                     transform: 'translate(-50%, -50%)',
                     zIndex: 2,
                     fontWeight: 800,
-                    // fontSize: '5rem',
                     textAlign: 'center',
                     userSelect: 'none',
                     pointerEvents: 'none',
@@ -45,8 +44,6 @@ const Intro = () => {
             </Typography>
             <Swiper
                 slidesPerView={1}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}   
                 modules={[Autoplay]}
                 loop={true}
                 autoplay={{
